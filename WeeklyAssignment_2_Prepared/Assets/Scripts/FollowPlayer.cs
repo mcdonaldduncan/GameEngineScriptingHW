@@ -181,10 +181,7 @@ public class FollowPlayer : MonoBehaviour
     public void UpdateLastSubjectPosition(Vector3 position)
     {
         // Assign the value of the parameter to the lastSubjectPosition 
-        if (subject.position.z != position.z)
-        {
-            lastSubjectPosition = position;
-        }
+        lastSubjectPosition = position;
     }
 
     /// <summary>
