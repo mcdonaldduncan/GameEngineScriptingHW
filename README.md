@@ -1,2 +1,2 @@
 # GameEngineScriptingHW
-Game Engine Scripting HW
+Game Engine Scripting Homework
