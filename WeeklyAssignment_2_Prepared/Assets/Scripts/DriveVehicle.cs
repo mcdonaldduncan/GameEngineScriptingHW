@@ -207,7 +207,7 @@ public class DriveVehicle : MonoBehaviour
     /// or set Pause to false if Pause had been true.
     /// </summary>
     /// <param name="currentPauseState">Current value of PauseState</param>
-    public static bool SetPauseState( bool currentPauseState)
+    public static bool SetPauseState(bool currentPauseState)
     {
         // Flip or reverse the pause state
         bool nextPauseState = !currentPauseState;
