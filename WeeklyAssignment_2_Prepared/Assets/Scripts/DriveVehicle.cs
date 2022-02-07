@@ -227,15 +227,8 @@ public class DriveVehicle : MonoBehaviour
     {
         // Replace the following with several lines that determine if the currentPosition parameter
         // is the same or less than the stoppingPosition parameter
-        if (currentPosition.z <= stoppingPosition.z)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-        
+
+        return currentPosition.z <= stoppingPosition.z;
     }
 
 
