@@ -145,14 +145,8 @@ public class FollowPlayer : MonoBehaviour
     public static bool CheckForStop(Vector3 currentPosition, Vector3 stoppingPosition)
     {
         // Replace the following with what you used in CheckForStop in DriveVehicle
-        if (currentPosition.z <= stoppingPosition.z)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        
+        return currentPosition.z <= stoppingPosition.z;
     }
 
     /// <summary>

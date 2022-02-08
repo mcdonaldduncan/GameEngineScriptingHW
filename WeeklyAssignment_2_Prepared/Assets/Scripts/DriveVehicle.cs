@@ -207,7 +207,7 @@ public class DriveVehicle : MonoBehaviour
     /// or set Pause to false if Pause had been true.
     /// </summary>
     /// <param name="currentPauseState">Current value of PauseState</param>
-    public static bool SetPauseState( bool currentPauseState)
+    public static bool SetPauseState(bool currentPauseState)
     {
         // Flip or reverse the pause state
         bool nextPauseState = !currentPauseState;
@@ -227,15 +227,8 @@ public class DriveVehicle : MonoBehaviour
     {
         // Replace the following with several lines that determine if the currentPosition parameter
         // is the same or less than the stoppingPosition parameter
-        if (currentPosition.z <= stoppingPosition.z)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-        
+
+        return currentPosition.z <= stoppingPosition.z;
     }
 
 
