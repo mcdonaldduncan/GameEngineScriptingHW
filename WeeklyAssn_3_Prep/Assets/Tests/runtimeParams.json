@@ -1,0 +1,13 @@
+﻿{
+  "SceneName": "CubeWalls",
+
+  "paddleTester": {
+    "TranslateIncrement": 0.5,
+    "AngleIncrement": 14
+  },
+
+
+  "sphereTester": {
+    "increment": 10
+  }
+}
