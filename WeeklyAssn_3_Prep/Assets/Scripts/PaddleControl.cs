@@ -255,7 +255,7 @@ public class PaddleControl : MonoBehaviour
         }
         /// Move the Paddle along the X-axis by the local variable 
         /// See Comments below re this action
-        transform.Translate(temp, 0, 0, Space.World);
+        transform.Translate(Vector3.right * temp, Space.World);
 
         /// Comments to help with the last step (Move the Paddle along the X-axis by the local variable )
         /// To move the Paddle you will want to use Translate rather than 
