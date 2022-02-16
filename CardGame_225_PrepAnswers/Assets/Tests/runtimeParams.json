@@ -1,0 +1,11 @@
+﻿{
+  "SceneName": "CardSetup",
+
+  "dealerTester": {
+    "advanceBy": 5,
+    "endDeckTest": 52,
+    "initialCardForSum": 11,
+    "displayCardRelPos" :  0
+  }
+
+}
