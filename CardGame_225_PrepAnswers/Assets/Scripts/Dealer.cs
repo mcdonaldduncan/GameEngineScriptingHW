@@ -181,7 +181,11 @@ public class Dealer : MonoBehaviour
     public void UpdateCurrentCardPosition(int advanceBy)
     {
         // Advance the currentCardPosition by advanceBy
-        
+        currentCardPosition += advanceBy;
+        if (currentCardPosition >= deck.Length)
+        {
+            currentCardPosition = deck.Length;
+        }
 
         // Debug statement provided so that you can see the currentCardPosition change
         Debug.LogFormat("currentCurePosition = {0}", currentCardPosition);
@@ -201,6 +205,10 @@ public class Dealer : MonoBehaviour
         // as the deck, don't assume that it is 52!
         // The following line will be true or false depending upon 
         // the question above.
+        if (currentCardPosition >= deck.Length)
+        {
+            return true;
+        }
         return false;
     }
 
@@ -217,6 +225,10 @@ public class Dealer : MonoBehaviour
         // Set the sprite to the class variable CardBack.
         // Do not assume the size of the array. Do not assume 
         // that there are only four card positions.
+        for (int i = 0; i < cardGOs.Length; i++)
+        {
+            cardGOs[i].GetComponent<SpriteRenderer>().sprite = cardBack;
+        }
     }
 
     /// <summary>
@@ -229,6 +241,10 @@ public class Dealer : MonoBehaviour
         int sum = 0;
         // Loop through the array to get the sum of all of the values 
         // of the cards.
+        for (int i = 0; i < hand.Length; i++)
+        {
+            sum += hand[i].value;
+        }
         return sum;
     }
 
