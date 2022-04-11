@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ItemBehavior : MonoBehaviour
 {
+    [SerializeField] GameBehavior GameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager = GameObject.Find("Game_Manager").GetComponent<GameBehavior>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,8 @@ public class ItemBehavior : MonoBehaviour
         {
             Destroy(transform.gameObject);
             Debug.Log("Item Collected!");
+
+            GameManager.Items += 1;
         }
     }
 }
