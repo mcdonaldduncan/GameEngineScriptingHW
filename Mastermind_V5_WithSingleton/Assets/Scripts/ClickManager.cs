@@ -75,14 +75,14 @@ public class ClickManager : MonoBehaviour
     {
         if (answerDetection.winGame)
             return;
-
+        if (!gameManager.CanAdvance())
+            return;
+        
         //Debug.LogFormat("Current Move is {0}", gameManager.CurrentMove);
-
         if (!Input.GetMouseButtonDown(0))
         {
             return;
         }
-        
 
         Vector3 mp = Input.mousePosition;
         Ray ray = Camera.main.ScreenPointToRay(mp);

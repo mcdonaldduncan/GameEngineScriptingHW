@@ -96,6 +96,8 @@ public class AnswerDetection : MonoBehaviour
     /// </summary>
     void Start()
     {
+        winGame = false;
+
         gameManager = GameManager.Instance;
         // Reference to the script component attached to this class
         //gameManager = GetComponent<GameManager>();
@@ -113,8 +115,6 @@ public class AnswerDetection : MonoBehaviour
         RandomizeAnswerKey();
     }
 
-    
-
     /// <summary>
     /// Determine the Y-Value distance between the first child object of each of the 
     /// first two rows.
@@ -129,7 +129,6 @@ public class AnswerDetection : MonoBehaviour
             Vector3 rowTwoVec = PlayerRows.transform.GetChild(1).GetChild(0).position;
             DistanceBetweenRows = rowTwoVec.y - rowOneVec.y;
         }
-
     }
 
     private void GetGrids()
@@ -168,6 +167,9 @@ public class AnswerDetection : MonoBehaviour
 
     private void Evaluate()
     {
+        if (!gameManager.CanAdvance())
+            return;
+
         Material[] answerMats = new Material[answerKey.Length];
         for (int i = 0; i < answerKey.Length; i++)
         {
@@ -186,6 +188,9 @@ public class AnswerDetection : MonoBehaviour
 
     void Report(Material[] answerMats, Material[] currentMats)
     {
+        if (winGame)
+            return;
+
         // Clear lists so that new objects can be instantiated, remove when using multiple lists
         randomizedPins.Clear();
         sortedPins.Clear();

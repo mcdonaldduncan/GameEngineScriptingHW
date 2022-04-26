@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public int MaxMoves { get; private set; }
 
     // All the methods that we need for the GameManager
-
+    AnswerDetection answerDetection;
 
     static private GameManager _instance;
 
@@ -62,15 +62,14 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
+        answerDetection = GameObject.Find("AnswerDetector").GetComponent<AnswerDetection>();
+        answerDetection.winGame = false;
     }
 
     public void AdvanceCurrentMove()
     {
         if (CanAdvance())
-        {
             CurrentMove++;
-        }
         
     }
 
