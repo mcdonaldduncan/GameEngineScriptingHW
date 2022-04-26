@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3de817143f5988b43819cced14ae3c5a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - PlayerRows: {instanceID: 0}
+  - HintGrids: {instanceID: 0}
+  - RowIndicator: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
