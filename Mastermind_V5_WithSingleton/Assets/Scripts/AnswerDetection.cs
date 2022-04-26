@@ -152,7 +152,6 @@ public class AnswerDetection : MonoBehaviour
             GetGrids();
             RowIndicator.transform.Translate(0,DistanceBetweenRows,0);
         }
-
     }
 
     void Update()
@@ -221,9 +220,6 @@ public class AnswerDetection : MonoBehaviour
                 answerValues[i] = -1;
                 InstantiatePin(2, hintGrid.transform.GetChild(i).transform);
             }
-          //  Debug.Log(answerValues[i]);
-           
-
         }
         scoreHistory.SaveHistory(answerValues);
 
