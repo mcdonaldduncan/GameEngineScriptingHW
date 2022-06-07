@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Learning Unity.unity
+- path: Assets/Scenes/OnTheRun.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
